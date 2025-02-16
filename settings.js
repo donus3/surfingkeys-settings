@@ -70,10 +70,12 @@ settings.theme=`
 
 .sk_theme #sk_omnibarSearchResult ul li {
   background: #11111b;
-  padding: 1.5rem;
+  padding: 1.2rem;
   padding-left: 0.4rem;
   border-color: #181818;
   border-radius: 12px;
+  gap: 8px;
+  margin-block: 8px;
 }
 
 .sk_theme #sk_omnibarSearchResult ul li.focused {
@@ -94,6 +96,14 @@ settings.theme=`
   border-style: none;
   outline: none;
   padding-left: 18px;
+}
+
+#sk_omnibarSearchArea>.prompt>.separator {
+  display: none;
+}
+
+#sk_omnibarSearchArea>.prompt:before {
+  content: "> ";
 }
 
 /* ---------- Tab hint ---------- */
@@ -171,6 +181,8 @@ div.sk_tab_hint {
 
 #sk_tabs.vertical div.sk_tab_hint {
     position: fixed;
+    left: auto;
+    color: darkorange;
 }
 
 #sk_usage,
@@ -213,91 +225,13 @@ div.tab_rocket {
 #sk_status {
   position: fixed;
   bottom: 0;
-  right: 39%;
   z-index: 2147483000;
   padding: 8px 8px 4px 8px;
   border-radius: 5px;
   border: 1px solid #282828;
   font-size: 12px;
   box-shadow: 0px 20px 40px 2px rgba(0, 0, 0, 1);
-  width: 20%;
   margin-bottom: 1rem;
-}
-
-/* ---------- Search bar ---------- */
-#sk_omnibarSearchArea {
-  border-bottom: 0px solid #282828;
-}
-
-#sk_omnibarSearchArea .resultPage {
-  display: inline-block;
-  font-size: 12pt;
-  font-style: italic;
-  width: auto;
-}
-
-#sk_omnibarSearchResult li div.url {
-  font-weight: normal;
-  white-space: nowrap;
-  color: #89B4FA;
-}
-
-#sk_omnibarSearchResult li div.title {
-  color: #cdd6f4;
-  text-align: left;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: auto;
-  font-weight: 600;
-}
-
-.sk_theme .omnibar_highlight {
-  color: #A6E3A1;
-  font-weight: bold;
-}
-
-.sk_theme .omnibar_folder {
-  border: 1px solid #b4befe;
-  border-radius: 5px;
-  background: #b4befe;
-  color: #1e1e2e;
-  box-shadow: 1px 1px 5px rgba(0, 8, 8, 1);
-  font-weight: 400;
-}
-
-.sk_theme .omnibar_timestamp {
-  background: #f2cdcd;
-  border: 1px solid #f2cdcd;
-  border-radius: 5px;
-  color: #1e1e2e;
-  box-shadow: 1px 1px 5px rgb(0, 8, 8);
-  font-weight: 400;
-}
-
-// search bar input 
-.sk_theme .prompt {
-  color: #b4befe;
-  border-radius: 10px;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-weight: bold;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.8);
-}
-
-.sk_theme .separator {
-  color: #9399b2;
-}
-
-#sk_status,
-#sk_find {
-  font-size: 10pt;
-  font-weight: bold;
-  text-align: center;
-  padding-right: 8px;
-}
-
-#sk_status span[style*="border-right: 1px solid rgb(153, 153, 153);"] {
-  display: none;
 }
 
 /* ---------- ACE Editor ---------- */
